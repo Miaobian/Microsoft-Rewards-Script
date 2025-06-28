@@ -46,13 +46,6 @@ COPY entrypoint.sh /usr/local/bin/
 # Make the entrypoint script executable
 RUN chmod +x /usr/local/bin/entrypoint.sh
 
-#自动填土容器路径
-VOLUME [ \
-  "/usr/src/microsoft-rewards-script/dist/accounts.json", \
-  "/usr/src/microsoft-rewards-script/dist/config.json", \
-  "/usr/src/microsoft-rewards-script/dist/browser/sessions" \
-]
-
 ENTRYPOINT [""]
 
 # Set the entrypoint script as the container's main command
